@@ -14,7 +14,7 @@
 1. In the terminal, navigate to the folder containing this file on your computer.
 2. Run the command `mocha ./`. You should see something like the following:
 
-![](./resources/mocha-output.png)
+<img src="./resources/mocha-output.png" alt="Screenshot" align="center" width="400"/>
 
 You can also let Mocha run tests for you automatically when your files change by running the `mocha -w ./` command.
 
