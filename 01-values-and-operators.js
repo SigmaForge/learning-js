@@ -74,10 +74,14 @@ describe("Operators", function(){
 		});
 
 		it("are applied differently as postfix or prefix", function(){
-			assert.equal(--10, ___);
-			assert.equal(10--, ___);
-			assert.equal(++10, ___);
-			assert.equal(10++, ___);
+			var x = 10;
+			assert.equal(--x, ___);
+			x = 10;
+			assert.equal(x--, ___);
+			x = 10;
+			assert.equal(++x, ___);
+			x = 10;
+			assert.equal(x++, ___);
 		});
 	});
 
