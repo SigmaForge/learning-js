@@ -46,11 +46,6 @@ describe("Operators", function(){
 		assert.strictEqual(10 % 3, _)
 	});
 
-	it("can sometimes be unary (take only one argument)", function(){
-		assert.strictEqual(typeof 1.2, _);
-		assert.strictEqual(-(6+4), _);
-	});
-
 	it("can be used to compare numbers", function(){
 		assert.strictEqual(1>2, _);
 		assert.strictEqual(1<2, _);
@@ -58,6 +53,32 @@ describe("Operators", function(){
 
 	it("can be used to compare strings", function(){
 		assert("Hello" > _);
+	});
+	
+	describe("Unary operators", function(){
+		it("take only one argument", function(){
+			assert.strictEqual(typeof 1.2, _);
+			assert.strictEqual(-(6+4), _);
+		});
+
+		it("can be used to increment a number", function(){
+			var num = 34;
+			num++;
+			assert.strictEqual(num, _);
+		});
+
+		it("can be used to decrement a number", function(){
+			var num = 34;
+			num++;
+			assert.strictEqual(num, _);
+		});
+
+		it("are applied differently as postfix or prefix", function(){
+			assert.equal(--10, _);
+			assert.equal(10--, _);
+			assert.equal(++10, _);
+			assert.equal(10++, _);
+		});
 	});
 
 	describe("Logical operators", function(){
