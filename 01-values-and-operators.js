@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var _ = undefined;
+var ___ = undefined;
 
 /*
  * To complete the exercise, replace underscores in the 
@@ -14,16 +14,16 @@ var _ = undefined;
 describe("Numbers", function(){
 
 	it("can be added together", function(){
-		var val = 34 + _ ;
+		var val = 34 + ___ ;
 		assert.strictEqual( val, 40);
 	});
 
 	it("can be defined using scientific notation", function(){
-		assert.strictEqual(3e8 * 3e8,  _);
+		assert.strictEqual(3e8 * 3e8,  ___);
 	});
 
 	it("are floating point", function(){
-		assert.strictEqual(1/2, _);
+		assert.strictEqual(1/2, ___);
 	});
 
 	it("will turn into NaN under certain conditions", function(){
@@ -31,73 +31,73 @@ describe("Numbers", function(){
 	});
 
 	it("that are NaN are not equal to themselves", function(){
-		assert.equal(NaN === NaN, _);
+		assert.equal(NaN === NaN, ___);
 	});
 
 });
 
 describe("Operators", function(){
 	it("follow the same rule of precedence as mathematics", function(){
-		assert.strictEqual( 10 * 3 + 4,  _ );
-		assert.strictEqual( 10 * (3 + 4), _ );
+		assert.strictEqual( 10 * 3 + 4,  ___ );
+		assert.strictEqual( 10 * (3 + 4), ___ );
 	});
 
 	it("can be used to find the remainder or modulo", function(){
-		assert.strictEqual(10 % 3, _)
+		assert.strictEqual(10 % 3, ___)
 	});
 
 	it("can be used to compare numbers", function(){
-		assert.strictEqual(1>2, _);
-		assert.strictEqual(1<2, _);
+		assert.strictEqual(1>2, ___);
+		assert.strictEqual(1<2, ___);
 	});
 
 	it("can be used to compare strings", function(){
-		assert("Hello" > _);
+		assert("Hello" > ___);
 	});
 	
 	describe("Unary operators", function(){
 		it("take only one argument", function(){
-			assert.strictEqual(typeof 1.2, _);
-			assert.strictEqual(-(6+4), _);
+			assert.strictEqual(typeof 1.2, ___);
+			assert.strictEqual(-(6+4), ___);
 		});
 
 		it("can be used to increment a number", function(){
 			var num = 34;
 			num++;
-			assert.strictEqual(num, _);
+			assert.strictEqual(num, ___);
 		});
 
 		it("can be used to decrement a number", function(){
 			var num = 34;
 			num++;
-			assert.strictEqual(num, _);
+			assert.strictEqual(num, ___);
 		});
 
 		it("are applied differently as postfix or prefix", function(){
-			assert.equal(--10, _);
-			assert.equal(10--, _);
-			assert.equal(++10, _);
-			assert.equal(10++, _);
+			assert.equal(--10, ___);
+			assert.equal(10--, ___);
+			assert.equal(++10, ___);
+			assert.equal(10++, ___);
 		});
 	});
 
 	describe("Logical operators", function(){
 		it("apply to boolean values", function(){
-			assert(true && _);
-			assert(false || _);
-			assert(!_);
+			assert(true && ___);
+			assert(false || ___);
+			assert(!___);
 		});
 		it("will short-circuit their arguments", function(){
-			assert.strictEqual( "Hello" || "Danger", _);
-			assert.strictEqual( "Hello" && "Danger", _);
+			assert.strictEqual( "Hello" || "Danger", ___);
+			assert.strictEqual( "Hello" && "Danger", ___);
 		});
 	});
 
     describe("The ternary operator", function(){
     	it("changes its resulting value based on a condition", function(){
-    		assert.strictEqual(_?3:4, 3);
-    		assert.strictEqual(false?"Brie":_, "Gouda cheese");
-    		assert.strictEqual(true?_:"Helicopter", "Hovercraft");
+    		assert.strictEqual(___?3:4, 3);
+    		assert.strictEqual(false?"Brie":___, "Gouda cheese");
+    		assert.strictEqual(true?___:"Helicopter", "Hovercraft");
     	});
     });
 
@@ -105,7 +105,7 @@ describe("Operators", function(){
 
 describe("Strings", function(){
 	it("can be concatenated together", function(){
-		var greeting = "Hello, " + _;
+		var greeting = "Hello, " + ___;
 		assert.strictEqual(greeting, "Hello, Awesome.");
 	});
 });
@@ -113,18 +113,18 @@ describe("Strings", function(){
 describe("Javascript", function(){
 	it("does really weird shit sometimes", function(){
 		// see https://www.destroyallsoftware.com/talks/wat
-		assert.strictEqual(100 * null, _);
-		assert.strictEqual("4" + 3 , _);
-		assert.strictEqual("4" - 3 , _);
-	    assert.strictEqual("4" * 3 , _);
-		assert.strictEqual(false == 0, _);
+		assert.strictEqual(100 * null, ___);
+		assert.strictEqual("4" + 3 , ___);
+		assert.strictEqual("4" - 3 , ___);
+	    assert.strictEqual("4" * 3 , ___);
+		assert.strictEqual(false == 0, ___);
 	});
 
 	it("gives the special '===' comparison operator", function(){
-		assert.strictEqual(0 == false, _);
-		assert.strictEqual("" == false, _);
-		assert.strictEqual(0 === false, _);
-		assert.strictEqual("" === false, _);
+		assert.strictEqual(0 == false, ___);
+		assert.strictEqual("" == false, ___);
+		assert.strictEqual(0 === false, ___);
+		assert.strictEqual("" === false, ___);
 	});
 })
 
