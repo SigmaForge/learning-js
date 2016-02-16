@@ -1,7 +1,12 @@
 /*
  * Complete the exercises below.
+ * 
+ * You can run this file in your command line by using node:
+ *
+ *     $ node ./04-EJS-Ch2-exercises.js
+ *
+ * The `console.log()` function will work as expected. 
  */
-
 
 /*
  * LOOPING A TRIANGLE
@@ -26,6 +31,8 @@
  * 
  */
 
+console.log("\n== Triangle exercise ==\n")
+
 // Your code here.
 
 
@@ -43,6 +50,8 @@
  * 5 (and still print "Fizz" or "Buzz" for numbers divisible 
  * by only one of those).
  */
+
+console.log("\n== FizzBuzz exercise ==\n")
 
 // Your code here.
 
@@ -71,5 +80,7 @@
  * it works for any size, outputting a grid of the given width 
  * and height.
  */
+
+console.log("\n== Chess board exercise ==\n")
 
 // Your code here.
