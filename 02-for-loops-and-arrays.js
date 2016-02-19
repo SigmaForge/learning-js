@@ -15,20 +15,20 @@ var ___ = undefined;
 describe("Arrays", function(){
  	
  	it("can be defined", function(){
- 		assert( ___ instanceof Array);
+ 		assert( [1] instanceof Array);
  	});
  	
  	it("have a length", function(){
  		var arr = [];
- 		assert.strictEqual(arr.length, ___);
+ 		assert.strictEqual(arr.length, 0);
  	});
 
  	it("can be accessed using the index notation", function(){
  		var arr = ["hello", 42, "Blueberry pie", [6, 7]];
- 		assert.strictEqual(arr[0], ___);
- 		assert.strictEqual(arr[1], ___);
- 		assert.strictEqual(arr[2], ___);
- 		assert.strictEqual(arr[3], ___);
+ 		assert.strictEqual(arr[0], "hello");
+ 		assert.strictEqual(arr[1], 42);
+ 		assert.strictEqual(arr[2], "Blueberry pie");
+ 		assert.strictEqual(arr[3], [6,7]); //this one is wrong
  	});
 
  	it("can be nested inside each other", function(){
@@ -46,13 +46,13 @@ describe("Arrays", function(){
  	it("can have an element added using 'push()'", function(){
  		var arr = [1,2,3];
  		arr.push("Gooseberry");
- 		assert.deepStrictEqual(arr, ___);
+ 		assert.deepStrictEqual(arr, [1,2,3,"Gooseberry"]);
  	});
 
  	it("can have an element removed using 'pop()'", function(){
  		var arr = [1,2,3];
  		arr.pop();
- 		assert.deepStrictEqual(arr, ___);
+ 		assert.deepStrictEqual(arr, [1,2]);
  	});
  });
 
@@ -64,7 +64,7 @@ describe("The for loop", function(){
 		for ( var x = 0; x < 10; x++){
 			xs.push(x);
 		}
-		assert.deepStrictEqual(xs, ___);
+		assert.deepStrictEqual(xs, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 	});
 
 	it("has an initialiser expression", function(){
@@ -72,7 +72,7 @@ describe("The for loop", function(){
 		for ( var x = 5; x < 10; x++){
 			xs.push(x);
 		}
-		assert.deepStrictEqual(xs, ___);
+		assert.deepStrictEqual(xs, [5, 6, 7, 8, 9]);
 	});
 
 	it("has a loop condition", function(){
@@ -80,7 +80,7 @@ describe("The for loop", function(){
 		for ( var x = 5; x < 12; x++){
 			xs.push(x);
 		}
-		assert.deepStrictEqual(xs, ___);
+		assert.deepStrictEqual(xs, [5, 6, 7, 8, 9, 10, 11]);
 	});
 
 	it("has an update expression", function(){
@@ -88,7 +88,7 @@ describe("The for loop", function(){
 		for ( var x = 5; x < 12; x=x+2){
 			xs.push(x);
 		}
-		assert.deepStrictEqual(xs, ___);
+		assert.deepStrictEqual(xs, [5, 7, 9, 11]);
 	});
 	
 	it("can get quite complex", function(){
@@ -106,7 +106,7 @@ describe("The for loop", function(){
 		for(var i=3, j=5; i<20 && j>0; i=j+i, j=(j+i)/2 ){
 			xs.push([i,j]);
 		}
-		assert.deepStrictEqual(xs, ___);
+		assert.deepStrictEqual(xs, [[3,5], [8, 4], [12, 6], [18, 9]]);
 	});
 	
 });

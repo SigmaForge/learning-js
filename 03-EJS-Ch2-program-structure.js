@@ -23,7 +23,7 @@ describe("[Control flow]: ", function(){
 			if(13 > 9){
 				a = "Goodbye";
 			}
-			assert.strictEqual(___, a);
+			assert.strictEqual("Goodbye", a);
 		});
 
 		it("can have an 'else' clause that will execute if the condition is false", function(){
@@ -33,7 +33,7 @@ describe("[Control flow]: ", function(){
 			} else {
 				a = "Crocodile";
 			}
-			assert.strictEqual(___, a);
+			assert.strictEqual("Crocodile", a);
 		});
 
 		it("can have multiple clauses each depedning on a condition", function(){
@@ -47,7 +47,7 @@ describe("[Control flow]: ", function(){
 			} else {
 				a = "Lion";
 			}
-			assert.strictEqual(___, a);
+			assert.strictEqual("Donkey", a);
 		});
 
 		it("can have any boolean expression in its conditional", function(){
@@ -55,15 +55,20 @@ describe("[Control flow]: ", function(){
 			if(13 > 44 || (1 > 0 && 4 > 5)){
 				a = "Puffer fish";
 			}
-			assert.strictEqual(___, a);
+			assert.strictEqual("Hippo", a);
 		});
+		/*
+		In the above, if the thing on the left of || evaluates to true, that 
+		will be returned always, otherwise the other side will. 
+		In this case it was false, so then var a still ="Hippo"
+		*/
 
 		it("Including function calls", function(){
 			var a = "Seagull";
 			if(isNaN(a)){
 				a = "Albatross";
 			}
-			assert.strictEqual(___, a);
+			assert.strictEqual("Albatross", a);
 		});
 	});
 
@@ -76,7 +81,7 @@ describe("[Control flow]: ", function(){
 				a++;
 				b = (b+2)*2;
 			}
-			assert.strictEqual(___, b);
+			assert.strictEqual(124, b);
 		});
 
 		it("will never execute if the codnition is false", function(){
@@ -84,7 +89,7 @@ describe("[Control flow]: ", function(){
 			while(2>3){
 				a = a + a;
 			}
-			assert.strictEqual(___, a);
+			assert.strictEqual("Capuchin", a);
 		});
 	});
 
@@ -94,7 +99,7 @@ describe("[Control flow]: ", function(){
 			do {
 				a = a + a;
 			} while (a < 33);
-			assert.strictEqual(___, a);
+			assert.strictEqual(384, a);
 		});
 	});
 
@@ -105,7 +110,7 @@ describe("[Control flow]: ", function(){
 				a = a - 1;
 				break;
 			}
-			assert.strictEqual(___, a);
+			assert.strictEqual(98, a);
 		});
 		it("is mostly useful when used with a condition", function(){
 			var a = 4;
@@ -117,16 +122,16 @@ describe("[Control flow]: ", function(){
 					break;
 				}
 			}
-			assert.strictEqual(___, a);
-			assert.strictEqual(___, b);
+			assert.strictEqual(7, a);
+			assert.strictEqual(13, b);
 		});
 	});
 
 	describe("The 'switch' statement", function(){
 		it("is like a series of else-if",function(){
 			var animal = "Carp";
-			var animal = undefined;
-			switch(a){
+			var sound = undefined;
+			switch(animal){
 				case 'Dog':
 					sound = "Woof";
 					break
@@ -137,7 +142,7 @@ describe("[Control flow]: ", function(){
 					sound = "Meow";
 					break;
 			}
-			assert.strictEqual(___, sound);
+			assert.strictEqual("Glup Glup", sound);
 		});
 
 		it("can have a default case", function(){
@@ -157,7 +162,7 @@ describe("[Control flow]: ", function(){
 					reaction = "Whoa, trippy!";
 					break;
 			}
-			assert.strictEqual(___, reaction);
+			assert.strictEqual("Whoa, trippy!", reaction);
 		});
 
 		it("will continue executing unless it encounters a break", function(){
@@ -179,9 +184,9 @@ describe("[Control flow]: ", function(){
 					smells_bad = false;
 					break;
 			}
-			assert(eats_goat === ___);
-			assert(braids_hair === ___);
-			assert(smells_bad === ___);
+			assert(eats_goat === true);
+			assert(braids_hair === true);
+			assert(smells_bad === true);
 		});
 	});
 });
